@@ -3,8 +3,8 @@
 using namespace std;
 
 float f(float y){
-    float x = pow(y,2)*cos(y)+1;
-    return x;
+    float z = pow(y,2)*cos(y)+1;
+    return z;
 }
 
 int main() {
@@ -33,7 +33,6 @@ int main() {
             err = abs((b - a) / 2);
         }
     }while(err >= 1e-6);
-        cout << x*10000/10000.0;
-        cout << f(x)*10000/10000.0;
+        cout << int(x*10000)/10000.0 << endl;
     return 0;
 }
