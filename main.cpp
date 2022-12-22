@@ -19,7 +19,7 @@ int main() {
     if(f(a)*f(b) >=0){
         return 5;
     }else{
-        a=(a+b)/2;
+        x=(a+b)/2;
     }if(f(x)==0){
         cout << x;
         cout << f(x);
