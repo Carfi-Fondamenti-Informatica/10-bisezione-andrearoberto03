@@ -13,30 +13,30 @@ int main() {
     float b=0;
     float err=0;
     float x=0;
-    cout << "inserire estremi";
-    cin >> a;
-    cin >> b;
-    if(f(a)*f(b) >=0){
-        return 5;
-    }else{
-        x=(a+b)/2;
-    }if(f(x)==0){
-        cout << x;
-        cout << f(x);
-    }else{
-        if(f(a)*f(b) < 0){
-            b=x;
-        }else{
-            a=x;
+    do {
+        cout << "inserire estremi";
+        cin >> a;
+        cin >> b;
+    }while(f(a)*f(b) >=0);
+
+    do {
+        a = (a + b) / 2;
+        if (f(x) == 0) {
+            cout << x;
+            cout << f(x);
+            return 0;
+        } else {
+            if (f(a) * f(b) < 0) {
+                b = x;
+            } else {
+                a = x;
+            }
+            err = abs((b - a) / 2);
         }
-    }
-    err = abs((b-a)/2);
-    if(err >= 1e-6){
-        return 11;
-    }else{
-        cout << x;
-        cout << f(x);
-    }
+    }while(err >= 1e-6);
+        cout << x*10000/10000.0;
+        cout << f(x)*10000/10000.0;
+
 
     return 0;
 }
