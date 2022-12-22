@@ -3,9 +3,8 @@
 using namespace std;
 
 float f(float y){
-    float z;
-    z = pow(y,2)*cos(y)+1;
-    return z;
+    float x = pow(y,2)*cos(y)+1;
+    return x;
 }
 
 int main() {
@@ -14,15 +13,15 @@ int main() {
     float err=0;
     float x=0;
     do {
-        cout << "inserire estremi";
+        cout << "inserire estremi" << endl;
         cin >> a;
         cin >> b;
-    }while(f(a)*f(b) >=0);
+    }while(f(a)*f(b) >= 0);
 
     do {
-        a = (a + b) / 2;
+        x = (a + b) / 2;
         if (f(x) == 0) {
-            cout << x;
+            cout << x << endl;
             cout << f(x);
             return 0;
         } else {
@@ -36,7 +35,5 @@ int main() {
     }while(err >= 1e-6);
         cout << x*10000/10000.0;
         cout << f(x)*10000/10000.0;
-
-
     return 0;
 }
