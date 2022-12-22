@@ -3,8 +3,8 @@
 using namespace std;
 
 float f(float y){
-    float z = pow(y,2)*cos(y)+1;
-    return z;
+    float x = pow(y,2)*cos(y)+1;
+    return x;
 }
 
 int main() {
